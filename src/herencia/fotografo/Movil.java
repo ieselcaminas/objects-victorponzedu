@@ -19,4 +19,6 @@ public class Movil implements TomarFoto{
     public void tomarFoto(){
         System.out.println("Hago una foto con el móvil");
     }
+
+
 }
