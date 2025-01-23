@@ -25,13 +25,13 @@ public class MainAnimal {
         pepe.entrenar(gato);
         pepe.entrenar(tiburon);
 
-        pepe.dejarEntrar(perro);
+        //pepe.dejarEntrar(perro);
         pepe.dejarEntrar(gato);
 
         perro.setNombre("Óscar");
         System.out.println(perro);
 
-        pepe.dejarEntrar(perro);
+        //pepe.dejarEntrar(perro);
 
     }
 }
