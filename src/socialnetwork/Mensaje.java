@@ -4,9 +4,9 @@ public class Mensaje extends Publicacion{
     private int id;
     private String texto;
 
-    public Mensaje(String nombreUsuario, int id, String texto){
+    public Mensaje(Usuario usuario, int id, String texto){
         //Siempre hemos de llamar a un constructor de la clase padre
-        super(nombreUsuario);
+        super(usuario);
         this.id = id;
         this.texto = texto;
     }
@@ -29,6 +29,6 @@ public class Mensaje extends Publicacion{
 
     @Override
     public String toString(){
-        return  "ID - " + this.id + " usuario: " + this.getNombreUsuario() + " - " + this.texto;
+        return  "ID - " + this.id + " usuario: " + this.getUsuario() + " - " + this.texto;
     }
 }

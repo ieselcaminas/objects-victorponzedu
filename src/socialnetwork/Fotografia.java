@@ -4,8 +4,8 @@ public class Fotografia extends Publicacion{
     private String titulo;
     private String archivo;
 
-    public Fotografia(String nombreUsuario, String titulo, String archivo){
-        super(nombreUsuario);
+    public Fotografia(Usuario usuario, String titulo, String archivo){
+        super(usuario);
         this.titulo = titulo;
         this.archivo = archivo;
     }
@@ -28,7 +28,7 @@ public class Fotografia extends Publicacion{
 
     @Override
     public String toString(){
-        return this.getFecha() + " Usuario: " + this.getNombreUsuario() +
+        return this.getFecha() + " Usuario: " + this.getUsuario() +
                 " - Título " + this.titulo + " - Archivo: " + this.archivo +
                 " likes: " + this.getLikes();
     }

@@ -3,12 +3,12 @@ package socialnetwork;
 import java.util.Date;
 
 public abstract class Publicacion {
-    private String nombreUsuario;
+    private Usuario usuario;
     private Date fecha;
     private int likes;
 
-    public Publicacion(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
+    public Publicacion(Usuario usuario) {
+        this.usuario = usuario;
         //Estos dos datos no se los pasamos al constructor porque se inicializan
         //con valores. Es decir, la fecha es la del momento de la creación
         //y cuando se crea una Publicacion los likes son 0
@@ -16,8 +16,8 @@ public abstract class Publicacion {
         this.likes = 0;
     }
 
-    public String getNombreUsuario() {
-        return nombreUsuario;
+    public Usuario getUsuario() {
+        return usuario;
     }
 
     public Date getFecha() {
@@ -42,7 +42,4 @@ public abstract class Publicacion {
         return likes;
     }
 
-    public void setNombreUsuario(String nombreUsuario) {
-        this.nombreUsuario = nombreUsuario;
-    }
 }
