@@ -12,10 +12,11 @@ public class Main {
 
         Libro l = new Libro("Quijote", q);
         l.addTema(t);
+        t.addLibro(l);
 
         t = new Tema("Aventuras");
         l.addTema(t);
-
+        t.addLibro(l);
         libros.add(l);
 
         for(Libro libro: libros){

@@ -17,14 +17,18 @@ public class Main {
 
         sub.addLote(lote1);
 
+        //Hemos creado el lote por lo que ya pudemos crear el artículo
         Articulo libro = new Articulo(1, "libro", 100, lote1);
         Articulo ipad = new Articulo(2, "ipad", 1000, lote1);
 
+        //No nos olvidemos de añadirlos a los lotes
         lote1.addArticulo(libro);
         lote1.addArticulo(ipad);
 
+
         Lote lote2 = new Lote(2, "Lote 2", sub);
         sub.addLote(lote2);
+
         Articulo gafas = new Articulo(3, "Gafas" , 100, lote2);
         lote2.addArticulo(gafas);
 
@@ -35,6 +39,9 @@ public class Main {
         pepe.addPuja(puja);
         lote1.addPuja(puja);
 
+        puja = new Puja(3, 200, maria, lote1);
+        maria.addPuja(puja);
+        lote1.addPuja(puja);
 
     }
 }
