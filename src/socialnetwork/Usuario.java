@@ -1,10 +1,13 @@
 package socialnetwork;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Usuario{
     private String nick;
     private String nombre;
     private int id;
-
+    private List<Publicacion> publicaciones = new ArrayList<>();
     public Usuario(String nick, String nombre, int id) {
         this.nick = nick;
         this.nombre = nombre;
@@ -35,6 +38,13 @@ public class Usuario{
         this.id = id;
     }
 
+    public List<Publicacion> getPublicaciones() {
+        return publicaciones;
+    }
+
+    public void addPubicacion(Publicacion publicacion){
+        this.publicaciones.add(publicacion);
+    }
     @Override
     public String toString(){
         return this.id + " - " + this.nick;

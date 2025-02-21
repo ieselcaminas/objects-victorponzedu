@@ -1,9 +1,13 @@
 package banco;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Domiciliacion {
     private int n_dom;
     private String concepto;
     private double cantidad;
+    private List<Cliente> clientes = new ArrayList<>();
 
     public Domiciliacion(int n_dom, String concepto, double cantidad) {
         this.n_dom = n_dom;
@@ -33,6 +37,14 @@ public class Domiciliacion {
 
     public void setCantidad(double cantidad) {
         this.cantidad = cantidad;
+    }
+
+    public List<Cliente> getClientes() {
+        return clientes;
+    }
+
+    public void addCliente(Cliente cliente){
+        this.clientes.add(cliente);
     }
     @Override
     public String toString(){

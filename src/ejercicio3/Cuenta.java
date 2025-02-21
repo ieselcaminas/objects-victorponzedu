@@ -21,6 +21,7 @@ public class Cuenta {
     public double getCantidad() {
         return cantidad;
     }
+
     public void ingresar(double ingreso){
         if (ingreso > 0){
             this.cantidad += ingreso;

@@ -7,14 +7,13 @@ public class Departamento {
     private int n_dep;
     private String nombre;
     private AreaConocimiento ac;
-    private List<Profesor> profesores;
+    private List<Profesor> profesores = new ArrayList<>();
     private Catedra catedra;
 
     public Departamento(int n_dep, String nombre, AreaConocimiento ac, Catedra catedra) {
         this.n_dep = n_dep;
         this.nombre = nombre;
         this.ac = ac;
-        this.profesores = new ArrayList<>();
         this.catedra = catedra;
     }
 

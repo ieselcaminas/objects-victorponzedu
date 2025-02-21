@@ -29,6 +29,6 @@ public class Mensaje extends Publicacion{
 
     @Override
     public String toString(){
-        return  "ID - " + this.id + " usuario: " + this.getUsuario() + " - " + this.texto;
+        return  "ID - " + this.id + " usuario: " + this.getUsuario().getNombre() + " - " + this.texto;
     }
 }

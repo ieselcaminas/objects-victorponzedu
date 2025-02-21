@@ -21,7 +21,6 @@ public class MainAnimal {
         tiburon.respirar();
 
         Entrenador pepe = new Entrenador("PEPE");
-
         pepe.entrenar(gato);
         pepe.entrenar(tiburon);
 
@@ -31,7 +30,7 @@ public class MainAnimal {
         perro.setNombre("Óscar");
         System.out.println(perro);
 
-        //pepe.dejarEntrar(perro);
+        pepe.dejarEntrar(perro);
 
     }
 }

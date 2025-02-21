@@ -28,7 +28,7 @@ public class Fotografia extends Publicacion{
 
     @Override
     public String toString(){
-        return this.getFecha() + " Usuario: " + this.getUsuario() +
+        return this.getFecha() + " Usuario: " + this.getUsuario().getNombre() +
                 " - Título " + this.titulo + " - Archivo: " + this.archivo +
                 " likes: " + this.getLikes();
     }

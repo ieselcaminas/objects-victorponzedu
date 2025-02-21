@@ -34,6 +34,11 @@ public class Sucursal {
     public void setBanco(Banco banco) {
         this.banco = banco;
     }
+
+    public List<Prestamo> getPrestamos() {
+        return prestamos;
+    }
+
     public void addPrestamo(Prestamo prestamo){
         this.prestamos.add(prestamo);
     }

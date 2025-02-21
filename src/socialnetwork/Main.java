@@ -15,24 +15,23 @@ public class Main {
         Usuario juan = new Usuario("juan", "Juan Pérez", 1);
         Mensaje t = new Mensaje(juan, 1, "Primer mensaje");
         publicaciones.add(t);
-        //System.out.println(t);
+        juan.addPubicacion(t);
 
         Usuario maria = new Usuario("maria", "María Pérez", 1);
         Fotografia f = new Fotografia(maria, "Amanecer", "c:/amanecer.png");
         publicaciones.add(f);
+        maria.addPubicacion(f);
         Comentario c = new Comentario(1, juan, "Muy bueno", t);
         comentarios.add(c);
-
-        for(Comentario comentario: comentarios){
-            System.out.println(comentario.getPublicacion().getUsuario().getNick());
-        }
-
+        f.addComentario(c);
         f.darLike();
-        //System.out.println(f);
-
-
-
-        //System.out.println(f.getUsuario().getNick());
+        System.out.println();
+        for(Publicacion publicacion: publicaciones){
+            System.out.println(publicacion);
+            for(Comentario comentario: publicacion.getComentarios()){
+                System.out.println(comentario);
+            }
+        }
 
     }
     private static void publicacionesDe(String nombre, List<Publicacion> listaPubicaciones){

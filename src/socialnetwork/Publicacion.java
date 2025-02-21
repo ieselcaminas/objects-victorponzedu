@@ -1,12 +1,14 @@
 package socialnetwork;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public abstract class Publicacion {
     private Usuario usuario;
     private Date fecha;
     private int likes;
-
+    private List<Comentario> comentarios = new ArrayList<>();
     public Publicacion(Usuario usuario) {
         this.usuario = usuario;
         //Estos dos datos no se los pasamos al constructor porque se inicializan
@@ -40,6 +42,14 @@ public abstract class Publicacion {
 
     public int getLikes() {
         return likes;
+    }
+
+    public List<Comentario> getComentarios() {
+        return comentarios;
+    }
+
+    public void addComentario(Comentario comentario){
+        this.comentarios.add(comentario);
     }
 
 }

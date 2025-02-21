@@ -8,14 +8,12 @@ import java.util.List;
 public class Cliente {
     private String DNI;
     private String nombre;
-    private List<Prestamo> prestamos;
-    private List<CC> ccs;
+    private List<Prestamo> prestamos = new ArrayList<>();
+    private List<CC> ccs = new ArrayList<>();
 
     public Cliente(String DNI, String nombre) {
         this.DNI = DNI;
         this.nombre = nombre;
-        this.prestamos = new ArrayList<>();
-        this.ccs = new ArrayList<>();
     }
 
     public String getDNI() {

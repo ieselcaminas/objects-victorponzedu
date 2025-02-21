@@ -6,12 +6,11 @@ import java.util.List;
 public class AreaConocimiento {
     private int n_area;
     private String nombre;
-    private List<Departamento> departamentos;
+    private List<Departamento> departamentos = new ArrayList<>();
 
     public AreaConocimiento(int n_area, String nombre) {
         this.n_area = n_area;
         this.nombre = nombre;
-        this.departamentos = new ArrayList<>();
     }
 
 

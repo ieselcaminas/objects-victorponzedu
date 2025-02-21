@@ -36,6 +36,6 @@ public class Comentario {
 
     @Override
     public String toString(){
-        return "id -" + this.id + "Usuario - " + this.usuario.getNombre() + " texto: " + this.texto;
+        return "id - " + this.id + "Usuario - " + this.usuario.getNombre() + " texto: " + this.texto;
     }
 }
